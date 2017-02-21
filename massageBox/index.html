@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link href="style/weibo.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="znsArea">
+<!--留言-->
+     <div class="takeComment">
+        <textarea name="textarea" class="takeTextField" id="tijiaoText"></textarea>
+        <div class="takeSbmComment">
+            <input type="button" id="btn1" class="inputs" value="" />
+            <span>(可按 Enter 回复)</span>
+        </div>
+    </div>
+<!--已留-->
+    <div class="commentOn">
+        <div class="messList" id="div1" style="height:502px">
+        	<div class="reply">
+                <p class="replyContent">需要在服务器环境下打开测试</p>
+                <p class="operation">
+                    <span class="replyTime">2018-09-08 16:37:60</span>
+                    <span class="handle">
+                    	<a href="javascript:;" class="acc">0</a>
+                        <a href="javascript:;" class="ref">0</a>
+                        <a href="javascript:;" class="del">删除</a>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="page" id="page">
+        	<!--<a href="javascript:;" class="active">1</a>
+        	<a href="javascript:;">2</a>
+        	<a href="javascript:;">3</a>-->
+        </div>
+    </div>
+</div>
+</body>
+<script src="ajax.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+	function createD(){
+		this.tijiaoText = document.getElementById('tijiaoText');
+		this.div1 = document.getElementById('div1');
+		this.page= document.getElementById('page');
+	}
+	createD.prototype={
+		constructor:createD,
+		init:function(){  //init 用来初始化函数
+			this.rendering(1);//初始化时加载第一页数据
+			this.getPages(this.page);
+			var _this=this;
+			this.div1.addEventListener('click',function(e){
+				if(e.target.className=='del'){//删除单个留言
+					_this.del(e.target.parentNode.dataset.id);
+				}else if(e.target.className=='acc'){
+					_this.acc(e.target,e.target.parentNode.dataset.id)
+				}else if(e.target.className=='ref'){
+					_this.ref(e.target,e.target.parentNode.dataset.id)
+				}
+			})
+		},		
+		rendering:function(num){ //rendering 用来渲染页面
+			
+			//	weibo.php?act=get&page=2	
+			//返回：[{id: ID, content: "内容", time: 时间戳, acc: 顶次数, ref: 踩次数}, {...}, ...]
+			var _this=this;
+			ajax({
+				url:'weibo.php',
+				data:{
+					act:'get',
+					page:num
+				},
+				succ:function(arr){
+					_this.div1.innerHTML = '';
+					arr.forEach(function(e,i){
+						var div = _this.createDiv(e.content,_this.createDate(e.time),e.id,e.acc,e.ref);
+						div.index=i;
+						_this.div1.appendChild(div);
+					});
+				}
+			});
+		},
+		createDate:function(time){ //根据获得的系统时间  创建2016-20-19 22:20:40 格式的时间
+			var str='';
+			var dates= new Date(time*1000);
+			var y= dates.getFullYear();
+			var m= this.getDouble(dates.getMonth());
+			var day= this.getDouble(dates.getDate());
+			var h =  this.getDouble(dates.getHours());
+			var m =  this.getDouble(dates.getMinutes());
+			var s =  this.getDouble(dates.getSeconds());
+			str=y+'-'+m+'-'+day+' '+h+':'+m+':'+s; 
+			return str;
+		},
+		getDouble:function(n){ 
+			return n<10?'0'+n:''+n;
+		},
+		createDiv:function(value,dates,id,acc,ref){  //用来创建数据
+			value=value.trim();//自定义ata-id  用来存每个留言的 id
+			var divs = document.createElement('div');
+			divs.className='reply';
+			divs.innerHTML=`<p class="replyContent">${value}</p>
+            <p class="operation">
+                <span class="replyTime">${dates}</span>
+                <span class="handle" data-id=${id}>
+                	<a href="javascript:;" class="acc">${acc}</a>
+                    <a href="javascript:;" class="ref">${ref}</a>
+                    <a href="javascript:;" class="del">删除</a>
+                </span>
+            </p>`;
+            return divs;
+		},
+		add:function(){
+			var _this=this;
+			var value=_this.tijiaoText.value;
+			if(value!=''){
+				//weibo.php?act=add&content=xxx
+				ajax({
+					url:'weibo.php',
+					data:{
+						act:'add',
+						content:value
+					},
+					succ:function(json){
+						if(!json.error){
+							_this.rendering(1);
+							_this.div1.value = '';
+							
+						}
+					}
+				});
+			}else{
+				alert('内容不能为空！');
+			}
+			_this.getPages(_this.page);//每次添加数据后   要更新页码
+			
+		},
+		getPages:function(obj){ // 获取页数
+			var _this=this;
+			//weibo.php?act=get_page_count	获取页数
+			ajax({
+				url:'weibo.php',
+				data:{
+					act:'get_page_count'
+				},
+				succ:function(e){
+					obj.innerHTML='';
+					for(var i=0;i<e.count;i++){
+						var a = document.createElement('a');
+						a.href='#page='+(i+1);
+						a.innerHTML=i+1;9
+						obj.appendChild(a);
+					}
+				}
+			});
+			
+		},
+		del:function(num){ // 用来删除数据 后 根据数据重新渲染页面
+			var _this=this;
+			//weibo.php?act=del&id=num
+			ajax({
+				url:'weibo.php',
+				data:{
+					act:'del',
+					id:num
+				},
+				succ:function(){
+					_this.rendering(1);
+					_this.getPages(_this.page);
+				}
+			});
+			
+		},
+		acc:function(obj,num){
+			var _this=this;
+			//weibo.php?act=acc&id=num
+			//	返回：{error:0}
+			ajax({
+				url:'weibo.php',
+				data:{
+					act:'acc',
+					id:num
+				},
+				succ:function(e){
+					if(!e.error){
+						_this.rendering(1);
+					}
+				}
+			});
+
+		},
+		ref:function(obj,num){
+			var _this=this;
+			//weibo.php?act=ref&id=num
+			ajax({
+				url:'weibo.php',
+				data:{
+					act:'ref',
+					id:num
+				},
+				succ:function(e){
+					if(!e.error){
+						_this.rendering(1);
+					}
+				}
+			});
+
+		}
+		
+		
+	};
+	var btn = document.getElementById('btn1');
+	var f= new createD();
+	f.init();
+	btn.onclick= function(){
+		f.add();
+	}
+	window.onhashchange=function(){
+		f.rendering(window.location.hash.split('=')[1]);
+	}
+</script>
+</html>

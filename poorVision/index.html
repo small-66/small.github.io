@@ -1,0 +1,327 @@
+<!--
+	作者：papa909@163.com
+	时间：2017-01-01
+	描述：
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<style>
+		.massages_c{
+			width:100%;
+			position:relative;
+			z-index: 203;
+		}
+		/*.massages_page{
+			width:100%;
+			overflow: hidden;
+		}
+		.massages_page a{
+			display: inline-block;
+		    height: 20px;
+		    padding: 0 4px;
+		    border: #CCC solid 1px;
+		    font: 12px/20px Verdana;
+		    text-decoration: none;
+		    margin-left: 5px;
+		    background: #FFF;
+		}*/
+		.por_box{
+			width:500px;
+			overflow:hidden;
+			margin: 100px 0 100px 200px ;
+			
+		}
+		.por_w1{
+			width:200px;
+			height:200px;
+			margin:20px;
+			float:left;
+			background-repeat:no-repeat;
+			background-size: 100%;
+			border-radius: 50%;
+			transition: .5s;
+		}
+		.por_w1:nth-of-type(1){
+			background-image: url(img/zuopin1.gif);
+		}
+		.por_w1:nth-of-type(2){
+			background-image: url(img/QQ.jpg);
+		}
+		.por_w1:nth-of-type(3){
+			background-image: url(img/canvas_bg.png);
+			
+		}
+		.por_w1:nth-of-type(4){
+			background-image: url(img/baidu.jpg);
+			
+		}
+		.por_w1:nth-of-type(5){
+			background-image: url(img/wenhao.jpg);
+		}
+		.por_w1 a{
+			z-index: 203;
+			display: block;
+			width:100%;
+			height:170px;
+			padding:15px 0;
+			background:rgba(255,255,255,.5);
+			text-align: center;
+			vertical-align: middle;
+			opacity: 0;
+			transition: 1s;
+			position:relative;
+			overflow: hidden;
+			border-radius: 50%;
+		}
+		.por_w1 a h3{
+			width:100%;
+			position:absolute;
+			top:-50px;
+			left:0;
+			transition: 0.5s;
+			text-align: center;
+			color:#000;
+		}
+		.por_w1 a p{
+			position:absolute;
+			width:100%;
+			top:50%;
+			left:0;
+			text-align: center;
+			color:#000;
+			font-weight: 600;
+		}
+		.por_w1 a:hover{
+			opacity: 1;
+		}
+		.por_w1 a:hover h3{
+			top:20%;
+		}
+	</style>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/iscroll.js"></script>
+	<script src="js/iscroll-probe.js"></script>
+	<script src="js/miaov.js"></script>
+	<script src="js/data.js"></script>
+	</head>
+	<body>
+		<section id="wrap">
+			<nav id="nav">
+				<h2 class="logo">logo</h2>
+				<ul class="list">
+					<li class="active"><a href="javascript:;" ><em>home</em><i>主页</i></a></li>
+					<li><a href="javascript:;"><em>about</em><i>介绍</i></a></li>
+					<li><a href="javascript:;" title="广告"><em>banner</em><i>广告</i></a></li>
+					<li><a href="javascript:;"title="作品"><em>products</em><i>项目板块</i></a></li>
+					<li><a href="javascript:;" title="照片墙"><em>photos</em><i>照片墙</i></a></li>
+					<li><a href="javascript:;"><em>famous</em><i>其他</i></a></li>
+					<li><a href="javascript:;" title="留言板"><em>contact</em><i>联系我</i></a></li>
+				</ul>
+				<div class="btn_nav">
+					<a href="javascript:;" class="c">中文</a><a href="javascript:;" class="e">ENGLISH</a>
+				</div>
+			</nav>
+			<button id="toTop">
+				<a href="javascript:;">回到顶部</a>
+			</button>
+			<section id="box">
+				<div id="home">
+					<div class="handImg"></div>
+					<div class="textImg"></div>
+					<div class="penImg"></div>
+				</div>
+				<div id="about">
+					<setction class="contents">
+						
+					</setction>
+					<div class="balloon"></div>
+					<div class="compasses"></div>
+				</div>
+				<div id="banner">
+					<section class="banner_wrap">
+						<a href="javascript:;" class="prev">
+							<span id="icon">
+								<img src="img/prev.png"/>
+							</span>
+							<span id="icon_1">
+								<img src="img/prev_1.png"/>
+							</span>
+							<span id="prev_txt">
+								<img src="img/prev_txt.png"/>
+							</span>
+						</a>
+						<a href="javascript:;" class="nexts">
+							<span id="next">
+								<img src="img/next.png"/>
+							</span>
+							<span id="next_1">
+								<img src="img/next_1.png"/>
+							</span>
+							<span id="next_txt">
+								<img src="img/next_txt.png"/>
+							</span>
+						</a>
+						<div id="imgWrap"></div>
+						<ul class="img_ul">
+							<li id="img_1">
+								<a href="#">
+									<img src="img/1.jpg" width="100"/>
+								</a>
+							</li>
+							<li id="img_2">
+								<a href="#">
+									<img src="img/2.jpg" width="270"/>
+								</a>
+							</li>
+							<li id="img_3">
+								<a href="#">
+									<img src="img/3.jpg" width="510"/>
+								</a>
+							</li>
+							<li id="img_4">
+								<a href="#">
+									<img src="img/4.jpg" width="680"/>
+								</a>
+							</li>
+							<li id="img_5">
+								<a href="#">
+									<img src="img/5.jpg" width="510"/>
+								</a>
+							</li>
+							<li id="img_6">
+								<a href="#">
+									<img src="img/6.jpg" width="270"/>
+								</a>
+							</li>
+							<li id="img_7">
+								<a href="#">
+									<img src="img/7.jpg" width="100"/>
+								</a>
+							</li>
+						</ul>
+					</section>	
+				</div>
+				<div id="products" >
+					<section class="por_box">
+						<div class="por_w1">
+							<a href="#">
+								<h3>作品一</h3>
+								<p>css3响应式</p>
+							</a>
+						</div>
+						<div class="por_w1">
+							<a href="#">
+								<h3>作品二</h3>
+								<p>QQ会员整站</p>
+							</a>
+						</div>
+						<div class="por_w1">
+							<a href="#">
+								<h3>作品三</h3>
+								<p>canvas首页导航</p>
+							</a>
+						</div>
+						<div class="por_w1">
+							<a href="#">
+								<h3>作品四</h3>
+								<p>百度云盘</p>
+							</a>
+						</div>
+						<div class="por_w1">
+							<a href="#">
+								<h3>待添加</h3>
+								<p>移动端</p>
+							</a>
+						</div>
+					</section>
+					<div class="bulb1"></div>
+					<div class="bulbl2"></div>
+				</div>
+				<div id="photos">
+					<section class="photos_wrap">
+						<ul class='photos_list'>
+						<!--<li><img src="image/10.jpg" alt="" /></li>
+						<li><img src="image/10.jpg" alt="" /></li>
+						<li><img src="image/10.jpg" alt="" /></li>-->
+						</ul>
+					</section>
+					<div class="pop"></div>
+					<div class="clock"></div>
+				</div>
+				<div id="famous">
+					<div class="Horse"></div>
+				</div>
+				<div id="contact">
+					<section class="massage_box">
+						<div class="massages_c">
+						<!--<div class="reply">
+			                <p class="operation">
+			                	<span class="information">
+			                    	<i class="name_">张三</i>
+			                    	<i class="phoe_">18644521235</i>
+			                    	<i class="email_">3177522841@qq.com</i>
+			               		</span>
+			                    <span class="replyTime">2017-01-01 16:37:60</span>
+			                </p>
+			                <p class="replyContent">天地无极，日月更迭。天地无极，日月更迭。天地无极，日月更迭。天地无极，日月更迭。天地无极，日月更迭。天地无极，日月更迭。天地无极，日月更迭</p>
+			                <i class="line"></i> 
+			           </div>-->	
+			            </div>
+			           <!-- <nav class="massages_page">
+			            	<a href="#">1</a>
+			            	<a href="#">2</a>
+			            	<a href="#">3</a>
+			            	<a href="#">4</a>
+			            	<a href="#">5</a>
+			            	<a href="#">6</a>
+			            </nav>-->
+					</section>
+					<section class="massage" >
+						<table>
+					        <tbody><tr class="name">
+					            <th><span class="">留言人：</span></th>
+					            <td><input placeholder="请输入姓名，不超过20个字！" maxlength="20" class="ml_11" type="text"></td>
+					            <td></td>
+					        </tr>
+					        <tr class="phone">
+					            <th><span>手机号码：</span></th>
+					            <td><input placeholder="请输入电话号码，不超过15位！" maxlength="15" class="ml_11" type="text"></td>
+					            <td></td>
+					        </tr>
+					        <tr class="mail">
+					            <th><span>您的邮箱：</span></th>
+					            <td><input placeholder="请输入邮箱地址，不超过30位！" maxlength="30" class="ml_11" type="text"></td>
+					            <td></td>
+					        </tr>
+					        <tr class="info">
+					            <th><span>留言内容：</span></th>
+					            <td colspan="2"><span class="fontred">*</span><textarea placeholder="请输入留言内容！"></textarea></td>
+					        </tr>
+					        <tr class="button">
+					            <th></th>
+					            <td><a class="btn" href="javascript:void(0)">发表留言</a><span class="info_ts"></span></td>
+					            <td></td>
+					        </tr>
+					    	</tbody>
+						</table>
+					</section>
+					<div class="book"></div>
+					<div class="map"></div>
+				</div>
+			</section>
+		</section>
+	</body>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		var myScroll1 = new IScroll('.massage_box', {
+		    mouseWheel: true,
+		    scrollbars: true
+		});
+	</script>
+</html>

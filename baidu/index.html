@@ -1,0 +1,266 @@
+<!--
+	作者：papa909@163.com
+	时间：2016-12-05
+	描述：百度云盘登陆后页面，实现该页面的交互功能
+-->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>百度网盘</title>
+<link href="img/favicon.ico" rel="icon" />
+<link rel="stylesheet" type="text/css" href="css/header.css"/>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/aside_left.css"/>
+<link rel="stylesheet" type="text/css" href="css/files_wrap.css"/>
+<link rel="stylesheet" type="text/css" href="css/font_css.css"/>
+</head>
+<script src="js/package.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/handledata.js"></script>
+<script src="js/data.js"></script>
+<body>
+	<header id="header" class="clearfix">
+		<h2 class="logo">百度网盘</h2>
+		<ul class="nav_list clearfix">
+			<li><a href="javascript:;" class="active">网盘</a></li>
+			<li><a href="javascript:;">分享</a></li>
+			<li><a href="javascript:;">更多</a></li>
+		</ul>
+		<div class="yun_head">
+			<a href="#" class="a_head">超级会员 限时优惠</a>
+			<span class="users">
+				<i class="user_pic">
+					<img src="img/user.jpg"/>
+				</i>
+				<span class="user_name">私奔到臭氧层</span>
+				<a href="#" class="user_level"></a>
+				<i class="user_arrow icon icon-dropdown-arrow"></i>
+			</span>
+			<div class="user_message">
+				<span class="spans"></span>
+				<div class="message_head">
+					<img src="img/user.jpg" alt="users" />
+				</div>
+				<p>
+					<span class="user_name">私奔到臭氧层</span>
+					<a href="#" class="user_level"></a>
+				</p>
+				<div class="user_vip">
+					<p>超级会员尊享特权：<a href="#">开通超级会员</a></p>
+					<nav class="user_nav">
+						<a href="#" title="5T超大空间"></a>
+						<a href="#" title="极速下载"></a>
+						<a href="#" title="在线云解压"></a>
+						<a href="#" title="一键转存50000文件"></a>
+						<a href="#" title="了解更多"></a>
+					</nav>
+					<div class="user_more">
+						<a href="#">个人资料</a>
+						<a href="#">帮助中心</a>
+						<a href="#">退出</a>
+					</div>
+				</div>
+			</div>
+			<i class="app_seperate"></i>
+			<a href="http://pan.baidu.com/download" class="user_loadown">客户端下载</a>		
+			<a href="#" title="系统通知" class="notice icon icon-notice"></a>
+			<a href="#" title="反馈意见" class="feedback icon icon-feedback"></a>
+			<a href="#" title="皮肤中心" class="dress_center icon icon-theme"></a>
+			<a href="#" title="会员中心" class="vip_center">会员中心</a>
+		</div>
+	</header>
+	<section id="aside_left">
+		<ul class="files_list">
+			<li class="active">
+				<a href="javascript:;">
+					<i class="icon icon-disk"></i>
+					<span>全部文件</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<span>图片</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<span>文档</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<span>视频</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<span>种子</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<span>音乐</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<span>其他</span>
+				</a>
+			</li>
+			<li class="big_t">
+				<a href="javascript:;">
+					<i class="icon icon-my-share"></i>
+					<span>我的分享</span>
+				</a>
+			</li>
+			<li class="big_t">
+				<a href="javascript:;">
+					<i class="icon icon-delete"></i>
+					<span>回收站</span>
+				</a>
+			</li>
+		</ul>
+		<div class="remaining-quota">
+			<div class="line">
+				<span></span>
+			</div>
+			<p>
+				<span>0</span>
+				/
+				<span>2068G</span>
+				<a href="javascript:;">扩容</a>
+			</p>
+		</div>
+		<div class="pc_phone clearfix">
+			<a href="javascript:;" title="下载百度网盘PC版" class="icon icon-yunguanjia"></a>
+			<a href="javascript:;" title="下载百度网盘Android版" class="icon icon-android"></a>
+			<a href="javascript:;" title="下载百度网盘iPhone版" class="icon icon-apple"></a>
+			<a href="javascript:;" title="side-more" class="side_more icon icon-more"></a>
+			<div class="load_down_dress">
+				<span class="ico_2"></span>
+				<ul class="list">
+					<li>
+						<a href="#">
+							<span class="icon icon-win"></span>
+							WP
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="icon icon-iPad"></span>
+							Ipad
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="icon icon-mac"></span>
+							Mac版
+						</a>
+					</li>
+					<li>
+						<img src="img/2w.png"/>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section id="files_wrap">
+		<header class="clearfix">
+			<div class="up_load">
+				<a href="javascript:;"><i class="icon icon-upload"></i>上传</a>
+				<ul>
+					<li>
+						<label>
+							<input type="file" name="" id="" value="上传文件" />
+							上传文件
+						</label>
+					</li>
+					<!--
+                    	用label包input显示label 隐藏input 实现点击上传文件的效果
+                    -->
+					<li>
+						<label>
+							<input type="file" name="" id="" value="上传文件夹" />
+							上传文件夹
+						</label>
+					</li>
+				</ul>
+			</div><!--
+			<input type="button" name="new_file" id="new_file" value="新建文件夹" />-->
+			
+			<a href="javascript:;" id="new_file"><i  class="icon icon-newfolder" ></i>新建文件夹</a>
+				<!--<input type="button" name="out_load" id="out_load" value="离线下载" />-->
+			<div class="outLoad">
+				<a href="javascript:;" id="out_load"><i  class="icon icon-download" ></i>离线下载</a>
+				<div class="my_phone">
+					<a href="javascript:;"><i class="icon icon-device"></i>我的设备</a>
+					<ul>
+						<li>推送任务列表</li>
+						<li>添加设备</li>
+					</ul>
+				</div>
+			</div>
+			<nav class="activity">
+				<a href="javascript:;"><i class="icon icon-my-share"></i>分享</a>
+				<a href="javascript:;"><i class="icon icon-download"></i>下载</a>
+				<a href="javascript:;"><i class="icon icon-delete"></i>删除</a>
+				<a href="javascript:;">重命名</a>
+				<a href="javascript:;">复制到</a>
+				<a href="javascript:;">移动到</a>
+				<a href="javascript:;" class="more"><i class="icon icon-more"></i>更多</a>
+			</nav>
+			<form action="#" method="post" class="search_head  ">
+				<input type="text" placeholder="搜索你的文件"/>
+				<i class="icon icon-search"></i>
+				<a href="javascript:;" title="sort" class="icon icon-order"></a>
+				<a href="javascript:;" title="array" class="icon icon-grid"></a>
+			</form>
+		</header>
+		<div class="files_title">
+			<nav>
+				<p>全部文件</p>
+				<div class="files_nav">
+					<a href="#">返回上一级&nbsp;></a>
+					<a href="#">全部文件&nbsp;></a>
+					<p>当前文件名称</p>
+				</div>
+				
+			</nav>
+			<p>已全部加载，共<em>0<em>个</p>
+		</div>
+		<div class="files_area">
+			<div class="clearfix">
+				<a href="javascript:;">
+					<em id="btn_sele"></em>
+					<strong>文件名</strong>
+				</a>
+				<span>大小<i class="icon icon-downtitle"></i></span>
+				<span>修改日期<i class="icon icon-downtitle"></i></span>
+			</div>
+			<ul class="files_ul">
+				<!--<li>
+					<strong >
+						<em></em>
+						<i></i>
+						<a href="javascript:;">我的资源</a>
+					</strong>
+					<span>-</span>
+					<span>2016-12-6</span>
+				</li>
+				<li>
+					<strong >
+						<em></em>
+						<i></i>
+						<a href="javascript:;">学习</a>
+					</strong>
+					<span>-</span>
+					<span>2016-11-26</span>
+				</li>-->
+			</ul>
+		</div>
+	</section>
+</body>
+</html>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/html5shiv.min.js" type="text/javascript" charset="utf-8"></script>

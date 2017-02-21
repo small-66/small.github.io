@@ -1,0 +1,595 @@
+#box{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom: 0;
+	margin-right: auto;
+	margin-left: auto;
+		}
+#box>div{
+	height: 1100px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 0;
+}	
+
+#home{
+   background: url(../img/home_bg.jpg) fixed no-repeat center 0;
+}
+
+#home .textImg{
+	position: absolute;
+	z-index: 202;
+	padding: 0;
+	top: 0;
+	height: 1100px;
+	width: 100%;
+	background: url(../img/home_sprite_main.png) fixed no-repeat center 0;
+}
+#home .penImg{
+	width: 100%;
+	height: 1100px;
+	position: absolute;
+	z-index: 202;
+	top: 0;
+	background: url(../img/home_frei.png) no-repeat center 417px;
+}
+#home .handImg{
+   	width: 100%;
+	height: 1100px;
+	z-index: 200;
+	position: absolute;
+	top: 0;
+	padding: 0;
+    background: url(../img/home_frei01.png) fixed no-repeat center 0;
+
+}
+
+
+#about{
+  background: url(../img/about_bg.jpg) fixed no-repeat center 0px;
+}
+
+#about .balloon{
+	height: 1100px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 200;
+   background: url(../img/about_sprite_frei.png) fixed no-repeat center 211px ;
+        background-position: 50% 0px; 
+}
+#about .compasses{
+	height: 1100px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 201;
+   background: url(../img/about_frei.png) fixed no-repeat center 0;
+}
+
+
+
+
+
+
+
+#famous{
+	
+   background: url(../img/famous_bg.jpg) fixed no-repeat center 0;
+}
+#famous .Horse {
+	background: url(../img/famous_sprite_frei.png) fixed no-repeat center 411px;
+	height: 1100px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 200;
+}
+#banner{
+   background: url(../img/banner_bg.jpg) fixed no-repeat center 0;
+}
+#products{
+   background: url(../img/projekt_bg.jpg) fixed no-repeat center 0px;
+}
+#products .bulb1{
+   background: url(../img/pro_sprite_frei.png) fixed no-repeat center 435px;
+	height: 1100px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 200;
+}
+#products .bulbl2{
+   background: url(../img/pro_frei.png) fixed no-repeat center 28px;
+	height: 1100px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 201;
+}
+
+
+
+
+
+
+#photos{
+   background: url(../img/photos_bg.jpg) fixed no-repeat center 0px;
+}
+#photos .pop{
+   background: url(../img/photos_frei.png) fixed no-repeat center 435px;
+	height: 1100px;
+	width: 100%;
+	padding: 0;
+	top: 0;
+	z-index: 201;
+	position: absolute;
+}
+#photos .clock{
+   background: url(../img/photos_sprite_frei.png) fixed no-repeat center 300px;
+	height: 1100px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 200;
+}
+
+#contact{
+   background: url(../img/technik_bg.jpg) no-repeat center top;
+}
+#contact .book{
+   background: url(../img/technik_sprite_frei.png) fixed no-repeat center 0;
+	height: 1100px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 200;
+}
+#contact .map{
+   background: url(../img/technik_frei.png) no-repeat center 200px;
+	height: 1100px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 201;
+}
+
+
+#nav{
+	z-index: 9999;
+    position: fixed;
+    width: 1324px;
+    height: 79px;
+    margin-left: -668px;
+    top: 0px;
+    left: 50%;
+	background: url(../img/menu_bg.png) no-repeat;
+}
+#nav .logo{
+	position:absolute;
+	top:0;
+	left:0;
+	line-height: 500px;
+	height:79px;
+	overflow: hidden;
+}
+#nav .list{
+    padding-left: 246px;
+    width: auto;
+    height: 79px;
+}
+#nav .list li{
+    text-align: center;
+    line-height: 79px;
+    width: 123px;
+    float: left;
+    height: 79px;
+    font-size: 16px;
+    border-right: #e4e4e4 1px solid;
+}
+#nav .list .last{
+	border: none;
+}
+#nav .list a{
+	width:100%;
+	display: inline-block;
+	font-family: 微软雅黑, Arial, Helvetica, sans-serif;
+	color:#000;
+}
+#nav .list li:hover{
+	color: #fff;
+	background: rgba(0,0,0,.3);
+	background:url(../img/menu_hover.gif) #8e273c no-repeat left top;
+    text-decoration: none;
+}
+#nav .list a:hover{
+	color: #fff;
+}
+#nav .list .active{
+	color: #fff;
+	background: rgba(0,0,0,.3);
+	background:url(../img/menu_hover.gif) #8e273c no-repeat left top;
+    text-decoration: none;
+}
+#nav .list .active a{
+	color: #fff;
+}
+#nav .list i{
+	display: none;
+}
+#nav .btn_nav {
+	position:absolute;
+	right:110px;
+	top:0;
+}
+#nav .btn_nav  .c{
+	display: block;
+	width:100px;
+	height:50%;
+	background:#000;
+	color:#fff;
+	text-align: center;
+	font:12px/38px "微软雅黑";
+}
+#nav .btn_nav  .e{
+	display: block;
+	width:100px;
+	height:50%;
+	font:12px/38px "微软雅黑";
+	color:#000;
+	text-align: center;
+}
+#nav .btn_nav .e:hover{
+	color:#fff;
+	background:url(../img/menu_hover.gif);
+}
+
+
+#toTop {
+	z-index: 99999;
+    position: fixed;
+    width: 55px;
+    bottom: 35px;
+    height: 55px;
+    right: 10px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+#toTop a{
+	width:100%;
+	display: block;
+	background: url(../img/top_ico.gif) no-repeat ;
+	width: 55px;
+    height: 55px;
+    text-indent: -200px;
+}
+#toTop a:hover{
+	background: url(../img/top_ico.gif) no-repeat 0 -55px;
+}
+
+#about .contents{
+    z-index: 202;
+    position: absolute;
+    margin-left: -45%;
+    overflow: hidden;
+    top: 200px;
+    left: 50%;
+    padding-left: 350px;
+	width: 439px;
+	background: url(../img/about_img.png) no-repeat 350px 0px;
+	height: 439px;
+}
+#banner .banner_wrap{
+	width: 970px;
+	height: 344px; 
+	position: relative; 
+	margin: 220px 40px; 
+	z-index: 23;
+}
+
+#banner .banner_wrap .prev { 
+	width: 120px; 
+	height: 72px; 
+	position: absolute; 
+	top: 108px; 
+	left: 72px; 
+	z-index: 4; 
+}
+#icon { 
+	width: 76px; 
+	height: 112px; 
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	transition: 1s;
+}
+#icon_1 { 
+	width: 76px; 
+	height: 112px; 
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	z-index: 2; 
+	filter: alpha(opacity=0); 
+	opacity: 0; 
+	transition: 1s;
+}
+#icon img,
+#icon_1 img,
+#next img,
+#next_1 img{
+	width: 76px; 
+	height: 112px; 
+}
+#next_txt img,
+#prev_txt img{
+	width: 106px; 
+	height: 112px;
+}
+#prev_txt { 
+	width: 106px; 
+	height: 112px; 
+	position: absolute; 
+	top: 0; 
+	left: 65px;
+	filter: alpha(opacity=0); 
+	opacity: 0; 
+	transition: 1s;
+}
+#banner .banner_wrap .nexts { 
+	width: 120px; 
+	height: 72px; 
+	position: absolute; 
+	top: 108px; 
+	right: 72px; 
+	z-index: 4; 
+}
+#next{ 
+	width: 76px;
+	height: 112px; 
+	position: absolute; 
+	top: 0; 
+	right: 0;
+	transition: 1s;
+}
+#next_1 { 
+	width: 76px; 
+	height: 112px; 
+	position: absolute; 
+	top: 0; 
+	right: 0px; 
+	z-index: 2; 
+	filter: alpha(opacity=0); 
+	opacity: 0; 
+	transition: .8s;
+}
+#next_txt { 
+	width: 106px; 
+	height: 112px; 
+	position: absolute; 
+	top: 0; 
+	right: 65px;
+	filter: alpha(opacity=0); 
+	opacity: 0; 
+	transition: .8s;
+}
+#imgWrap { 
+	border: 4px solid #fff; 
+	width: 672px; 
+	height: 336px; 
+	position: absolute; 
+	top: 0; 
+	left: 50%; 
+	margin-left: -340px; 
+	z-index: 3; 
+}
+#banner .banner_wrap ul { 
+	width: 970px; 
+	height: 344px; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	z-index: 1; 
+}
+#banner .banner_wrap li { 
+	position: absolute; 
+}
+
+#img_1{
+	top: -104px; 
+	left: 0;
+	z-index: 1; 
+	filter: alpha(opacity=0); 
+	opacity: 0;
+}
+#img_2{
+	top: 104px; 
+	left: 0;
+	z-index: 1; 
+	filter: alpha(opacity=0); 
+	opacity: .6;
+}
+#img_3{
+	top: 43px; 
+	left: 50px;
+	z-index: 3; 
+	filter: alpha(opacity=80); 
+	opacity: 0.8;
+}
+#img_4{
+	top: 0; 
+	left: 145px;
+	z-index: 4;
+	opacity: 1;
+}
+#img_5{
+	top: 43px;
+	left: 410px;
+	z-index: 3; 
+	filter: alpha(opacity=80); 
+	opacity: 0.8;
+}
+#img_6{
+	top: 104px;
+	
+	left: 700px; 
+	z-index: 2; 
+	filter: alpha(opacity=0); 
+	opacity: .6;
+}
+#img_7{
+	top: -104px;
+	left: 870px;
+	z-index: 1; 
+	filter: alpha(opacity=0); 
+	opacity: 0;
+}
+
+#contact .massage{
+	position:absolute;
+	bottom:0;
+	left:10%;
+	z-index: 203;
+	height: 400px;
+    width: 700px;
+}
+
+#contact .massage span{
+	color: rgb(153, 153, 153);
+    font-size: 12px;
+    font-family: 微软雅黑;
+}
+
+#contact .massage th{
+	height: 46px;
+    width: 105px;
+    text-align: right;
+}		
+#contact .massage .fontred {
+	font-family: 微软雅黑;
+    float: left;
+    color: rgb(255, 102, 0);
+    line-height: 30px;
+    width: 11px;
+}	
+#contact .massage  .ml_11{
+	margin-left: 11px;
+}
+#contact .massage  input{
+	border: #333 3px solid;
+    line-height: 30px;
+    width: 200px;
+    height: 30px;
+    color: #ccc;
+    background: #191919;
+}
+#contact .massage 	.btn{
+	display: inline-block;
+    background: #8e273c;
+    text-align: center;
+    line-height: 31px;
+    width: 100px;
+    height: 31px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 11px;
+}	
+
+#contact .massage  textarea {
+    margin: 4px 0px;
+    width: 300px;
+    background: #191919;
+    height: 60px;
+    color: #ccc;
+    font-size: 12px;
+    border: #333 3px solid;
+    line-height: 30px;
+    max-width: 300px;
+    max-height: 60px;	
+}
+
+
+#contact .massage_box{
+	z-index: 203;
+	width:500px;
+	height:400px;
+	position:absolute;
+	right:15%;
+	top:85px;
+	border:4px solid #fff;
+	background:rgba(0,0,0,.2);
+	overflow: hidden;
+}
+#contact  .reply{
+	padding:5px;
+	font:12px/20px "微软雅黑";
+	color:#fefefe;
+}
+
+.line:before{
+	content: "";
+    display: block;
+	border-top:1px dashed #fefefe;
+	width:100%;
+}
+.operation .information{
+	display: inline-block;
+	width:65%;
+}
+.operation i{
+	font-style: normal;
+	margin-right:1em;
+	line-break: normal;
+}
+.replyContent{
+	color:#000;
+	text-indent:2em;
+}
+/*photos.css*/
+.photos_wrap{
+	position:absolute;
+	z-index:999;
+	padding:20px;
+	top:85px;
+	left:100px;
+	width:440px;
+	height:500px;
+	border:4px dashed #fff;
+	overflow:hidden;
+}
+.photos_wrap>ul{
+	overflow: hidden;
+} 
+.photos_wrap>ul li{
+	float:left;
+	width:200px;
+	height:200px;
+	margin: 10px;
+	background: url(../image/loading.gif) no-repeat;
+}
+.photos_wrap li img{
+	width:200px;
+	height:200px;
+	opacity: .5;
+	transition: .5s;
+}
+.photos_wrap li img:hover{
+	opacity: 1;
+}
+/*photos.css end*/

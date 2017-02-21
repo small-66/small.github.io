@@ -1,0 +1,137 @@
+#aside_left{
+	width:194px;
+	height:100%;
+}
+.files_list{
+	margin-top: 10px;
+}
+.files_list li{
+	width: 141px;
+	height: 45px;
+	position: relative;
+	padding-left: 53px;
+}
+.files_list li>a{
+	width: 100%;
+	display: inline-block;
+}
+.files_list li span{
+	font: 14px/45px "微软雅黑";
+	color: #424e67;
+}
+.files_list .active span{
+	font: 14px/45px "微软雅黑";
+}
+.files_list i{
+	position: absolute;
+    left: 25px;
+    top: 17px;
+    font-size: 16px;
+    color: #424e67;
+}
+.files_list li.active{
+	background: #e4e9ec;
+}
+.files_list li.active *{
+	
+	color: #3b8cff;
+}
+.remaining-quota {
+	margin-top: 86px;
+	padding: 0 20px;
+}
+.remaining-quota .line{
+	width: 155px;
+	height: 8px;
+	border-radius: 5px;
+	background: #d8dce0;
+	margin-bottom: 5px;
+}
+.remaining-quota .line span{
+	background: #92ef55;
+	height: 100%;
+	width: 0;
+}
+.remaining-quota p{
+	font-size: 12px;
+	overflow: hidden;
+}
+.remaining-quota p a{
+	color: #3B8CFF;
+	float: right;
+}
+.pc_phone{
+	position: relative;
+	width: 100%;
+	height: 35px;
+}
+.pc_phone>a{
+	position: absolute;
+	font-size: 18px;
+	line-height: 35px;
+	color: #b2bbcc;
+	top:8px;
+}
+.pc_phone a:hover{
+	color: #d5dae3;
+}
+.pc_phone a:nth-of-type(1){
+	left: 22px;
+}
+.pc_phone a:nth-of-type(2){
+	left: 70px;
+}
+.pc_phone a:nth-of-type(3){
+	left: 114px;
+}
+.pc_phone a:nth-of-type(4){
+	left: 160px;
+}
+.load_down_dress{
+	display: none;
+	width: 300px;
+	height: 113px;
+	position: absolute;
+	top: -65px;
+	left:194px;
+	background: #f9f9f9;
+	z-index: 2;
+	border: 1px solid #e0e0e1;
+}
+.ico_2{
+	background: url(../img/ico_2.png) no-repeat;
+	width: 13px;
+	height: 24px;
+	position: absolute;
+	top:78px;
+	left: -13px;
+}
+.load_down_dress .list li{
+	float: left;
+	width: 52px;
+	margin-top: 38px;
+	height: 50px;
+}
+.load_down_dress .list li:last-of-type{
+	margin: 0;
+	width: 135px;
+	height: 113px;
+}
+.list li img{
+	width: 135px;
+	height: 113px;
+}
+.list li a{
+	display: inline-block;
+	padding-left: 25px;
+	width: 32px;
+	word-break: break-all;
+	font-size: 12px;
+	color: #666;
+}
+.list li span{
+	width: 50px;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
